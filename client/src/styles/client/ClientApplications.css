@@ -1,0 +1,243 @@
+.client-applications-page {
+    padding: 4vh 3vw;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 95%;
+    margin: auto;
+}
+
+.client-applications-page span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.client-applications-page span h3 {
+    color: #0d47a1;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.client-applications-page span select {
+    width: 45%;
+    padding: 0.8rem;
+    border: 1px solid #42a5f5;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #0d47a1;
+    cursor: pointer;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-applications-page span select:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+.client-applications-body {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    height: 76vh;
+    border-radius: 1rem;
+    margin-top: 3vh;
+    padding-top: 2vh;
+    overflow-y: auto;
+    background: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: #42a5f5 #e3f2fd;
+}
+
+/* Custom Scrollbar (Webkit Browsers) */
+.client-applications-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.client-applications-body::-webkit-scrollbar-thumb {
+    background: #42a5f5;
+    border-radius: 4px;
+}
+
+.client-applications-body::-webkit-scrollbar-track {
+    background: #e3f2fd;
+}
+
+.client-application {
+    padding: 2.5vh 2vw;
+    border-bottom: 1px solid rgba(84, 86, 86, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-application:last-child {
+    border-bottom: none;
+}
+
+.client-application:hover {
+    background: rgba(33, 150, 243, 0.05);
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2);
+}
+
+.client-application-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.client-application hr {
+    height: 2px;
+    background: linear-gradient(90deg, #42a5f5, transparent);
+    width: 100%;
+    margin: 1vh 0;
+    border: none;
+}
+
+.vertical-line {
+    width: 2px;
+    background: linear-gradient(to bottom, #42a5f5, transparent);
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.client-application-half {
+    width: 48%;
+}
+
+.client-application-half h4 {
+    font-size: 1.4rem;
+    color: #1a73e8;
+    margin-bottom: 1vh;
+    font-weight: 600;
+}
+
+.client-application-half p {
+    font-size: 0.9rem;
+    color: #546e7a;
+    margin-bottom: 1vh;
+    line-height: 1.6;
+}
+
+.client-application-half span {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.client-application-half span h5 {
+    font-size: 1.2rem;
+    color: #0b3954;
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+}
+
+.client-application-half span p {
+    margin: 0.5rem 0;
+    color: #455a64;
+    font-size: 0.9rem;
+}
+
+.client-application-half span .application-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.client-application-half span .application-skills p {
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 6px 12px;
+    border-radius: 1.5rem;
+    font-size: 0.75rem;
+    background: #ffebee;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.client-application-half span .application-skills p:hover {
+    background: #ef9a9a;
+    color: white;
+    transform: scale(1.05);
+}
+
+.client-application-half h6 {
+    font-size: 1rem;
+    color: #90a4ae;
+    margin-bottom: 0.5vh;
+    font-style: italic;
+}
+
+.client-application-half h6 b {
+    font-weight: 600;
+    color: #37474f;
+}
+
+/* Approve Buttons */
+.approve-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.approve-btns button {
+    width: 12vw;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.approve-btns .approve {
+    background: #43a047;
+}
+
+.approve-btns .approve:hover {
+    background: #2e7d32;
+    transform: scale(1.05);
+}
+
+.approve-btns .reject {
+    background: #e53935;
+}
+
+.approve-btns .reject:hover {
+    background: #c62828;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .client-applications-page span {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .client-applications-page span select {
+        width: 100%;
+    }
+
+    .client-application-body {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .client-application-half {
+        width: 100%;
+    }
+
+    .approve-btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .approve-btns button {
+        width: 100%;
+    }
+}

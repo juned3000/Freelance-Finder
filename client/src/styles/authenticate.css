@@ -1,0 +1,380 @@
+/* Authenticate Page Container */
+.AuthenticatePage {
+    width: 100%;
+    min-height: 100vh; /* Ensures full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa, #e4e9f2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Elements */
+.AuthenticatePage::before {
+    content: "";
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    background: linear-gradient(135deg, rgba(238, 73, 80, 0.07), rgba(238, 73, 80, 0.02));
+    border-radius: 50%;
+    top: -20vw;
+    right: -20vw;
+    z-index: 0;
+}
+
+.AuthenticatePage::after {
+    content: "";
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    background: linear-gradient(135deg, rgba(0, 115, 204, 0.07), rgba(0, 115, 204, 0.02));
+    border-radius: 50%;
+    bottom: -15vw;
+    left: -15vw;
+    z-index: 0;
+}
+
+/* Navigation Bar */
+.auth-navbar {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.auth-navbar h3 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #ee4950;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.auth-navbar h3:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 5px 15px rgba(238, 73, 80, 0.3);
+}
+
+.auth-navbar h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ee4950, rgba(238, 73, 80, 0.5));
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.auth-navbar h3:hover::after {
+    transform: translateX(0);
+}
+
+.auth-navbar p {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-left: 2vw;
+    color: #555;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.auth-navbar p:hover {
+    color: #ee4950;
+    background-color: rgba(238, 73, 80, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Authentication Form */
+.authForm {
+    margin-top: 12vh;
+    padding: 40px;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    font-family: 'Work Sans', sans-serif;
+    animation: fadeIn 0.6s ease-out;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.authForm:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Form Heading */
+.authForm h2 {
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #004f8f;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 700;
+    position: relative;
+}
+
+.authForm h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #0073cc, #004f8f);
+    border-radius: 3px;
+}
+
+/* Input Group */
+.authFormInputs {
+    width: 100%;
+    margin-bottom: 22px;
+    text-align: left;
+    position: relative;
+}
+
+/* Input Label */
+.authFormInputs label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00406e;
+    transition: color 0.3s ease;
+}
+
+.authFormInputs:focus-within label {
+    color: #0073cc;
+}
+
+/* Input Fields */
+.authFormInputs input, 
+.authForm select {
+    width: 100%;
+    padding: 14px 15px;
+    font-size: 1rem;
+    border: 1.5px solid rgba(170, 196, 216, 0.7);
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    color: #00406e;
+    transition: all 0.3s ease;
+}
+
+.authFormInputs input:focus, 
+.authForm select:focus {
+    border: 1.5px solid #0073cc;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 5px 15px rgba(0, 115, 204, 0.1);
+}
+
+/* Form Button */
+.authForm button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #0073cc, #005fa3);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 115, 204, 0.2);
+}
+
+.authForm button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 115, 204, 0.3);
+}
+
+.authForm button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.2) 50%, 
+        rgba(255, 255, 255, 0) 100%);
+    transition: left 0.7s ease;
+}
+
+.authForm button:hover::after {
+    left: 100%;
+}
+
+/* Redirect Text */
+.authForm p {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.authForm p span {
+    color: #0073cc;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.authForm p span:hover {
+    color: #ee4950;
+}
+
+.authForm p span::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background: #ee4950;
+    transition: width 0.3s ease;
+}
+
+.authForm p span:hover::after {
+    width: 100%;
+}
+
+/* Social Login Options */
+.social-login {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-login p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Validation */
+.input-error {
+    color: #ee4950;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    font-weight: 500;
+    display: none;
+}
+
+.authFormInputs.error input {
+    border-color: #ee4950;
+}
+
+.authFormInputs.error .input-error {
+    display: block;
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .auth-navbar {
+        padding: 0 5vw;
+    }
+
+    .auth-navbar h3 {
+        font-size: 1.5rem;
+    }
+
+    .authForm {
+        padding: 30px 25px;
+        margin-top: 15vh;
+    }
+
+    .authForm h2 {
+        margin-bottom: 25px;
+    }
+
+    .authFormInputs {
+        margin-bottom: 18px;
+    }
+
+    .authForm button {
+        padding: 12px 0;
+    }
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

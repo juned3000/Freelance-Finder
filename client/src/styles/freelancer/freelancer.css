@@ -1,0 +1,225 @@
+/* Freelancer Home Section */
+.freelancer-home {
+    padding: 4vh 3vw;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 95%;
+    margin: auto;
+}
+
+/* Freelancer Data Top */
+.freelancer-data-top {
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+    width: fit-content;
+    margin: 20px;
+    background: #ffffff;
+    padding: 2vh 3vw;
+    border-radius: 1rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.freelancer-data-top span {
+    display: flex;
+    gap: 12px;
+    width: fit-content;
+    align-items: center;
+}
+
+.freelancer-data-top span b {
+    font-size: 1.2rem;
+    color: #0d47a1;
+    font-weight: 600;
+}
+
+.freelancer-data-top span p {
+    margin: 0;
+    font-size: 1rem;
+    color: #424242;
+}
+
+/* Home Cards Section */
+.home-cards {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 6vh;
+    gap: 2vw;
+}
+
+.home-card {
+    width: 20%;
+    padding: 4vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(231, 220, 215, 0.13);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(196, 191, 189, 0.26);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.home-card h4 {
+    font-size: 1.4rem;
+    color: #2b2a2a;
+    font-weight: 500;
+}
+
+.home-card p {
+    color: #636363;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Card Button */
+.home-card button {
+    background-color: transparent;
+    color: #ee4950;
+    border: 1.5px solid #ee4950;
+    font-size: 1rem;
+    padding: 10px 25px;
+    width: 90%;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.home-card button:hover {
+    background-color: #ee4950;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Freelancer Details Section */
+.freelancer-details {
+    margin-top: 6vh;
+    width: 65%;
+    min-height: 40vh;
+    margin-left: 5vw;
+    padding: 4vh 3vw;
+    background: rgba(231, 220, 215, 0.13);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(196, 191, 189, 0.26);
+}
+
+/* Freelancer Details Data */
+.freelancer-details-data {
+    margin-top: 3vh;
+}
+
+.freelancer-details-data span {
+    display: block;
+    margin-bottom: 2vh;
+}
+
+.freelancer-details-data span h4 {
+    font-size: 1.4rem;
+    color: #0d47a1;
+    margin-bottom: 0.7vh;
+    font-weight: 600;
+}
+
+.freelancer-details-data span p {
+    font-size: 1rem;
+    color: #424242;
+    line-height: 1.6;
+}
+
+/* Skill Tags */
+.freelancer-details-data .skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.freelancer-details-data .skill {
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    padding: 8px 14px;
+    border-radius: 1.5rem;
+    background-color: #ffebee;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.freelancer-details-data .skill:hover {
+    background: #ef9a9a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Update Section */
+.freelancer-details-update h4 {
+    margin-top: 3vh;
+    font-size: 1.4rem;
+    color: #0d47a1;
+}
+
+/* Input & Textarea Styling */
+.freelancer-details-update input,
+.freelancer-details-update textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1.5px solid #42a5f5;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #0d47a1;
+    margin-bottom: 2vh;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freelancer-details-update input:focus,
+.freelancer-details-update textarea:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+.freelancer-details-update textarea {
+    min-height: 18vh;
+    resize: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .freelancer-home {
+        padding: 3vh 2vw;
+    }
+
+    .home-cards {
+        flex-direction: column;
+        gap: 3vh;
+        align-items: center;
+    }
+
+    .home-card {
+        width: 80%;
+    }
+
+    .freelancer-details {
+        width: 90%;
+        margin-left: 0;
+    }
+
+    .freelancer-data-top {
+        position: static;
+        margin: 2vh 0;
+        width: 100%;
+    }
+}

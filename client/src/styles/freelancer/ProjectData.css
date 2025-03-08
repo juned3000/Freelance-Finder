@@ -1,0 +1,269 @@
+/* Project Data Page */
+.project-data-page {
+    padding: 4vh 3vw;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 95%;
+    margin: auto;
+}
+
+/* Project Data Container */
+.project-data-container {
+    width: 60%;
+    text-align: left;
+    background: #ffffff;
+    padding: 3vh 3vw;
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-data h3 {
+    font-size: 2rem;
+    color: #0d47a1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.project-data p {
+    font-size: 1rem;
+    color: #424242;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.project-data span {
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.project-data span h5 {
+    font-size: 1.4rem;
+    color: #1e88e5;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+/* Required Skills */
+.project-data span .required-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-data span .required-skills p {
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 6px 12px;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    background: #ffebee;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-data span .required-skills p:hover {
+    background: #ef9a9a;
+    color: white;
+    transform: scale(1.05);
+}
+
+.project-data span h6 {
+    font-size: 1rem;
+    color: #546e7a;
+}
+
+/* Project Form Body */
+.project-form-body {
+    margin-top: 5vh;
+    padding: 4vh 3vw;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-form-body h4 {
+    font-size: 1.8rem;
+    color: #0d47a1;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Form Grid Layout */
+.project-form-body span {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    gap: 4%;
+}
+
+/* Form Inputs */
+.project-form-body span input,
+.project-form-body input,
+.project-form-body textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1.5px solid #42a5f5;
+    border-radius: 1rem;
+    background: #ffffff;
+    font-size: 1rem;
+    color: #0d47a1;
+    margin-bottom: 1.5vh;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-form-body input:focus,
+.project-form-body textarea:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+.project-form-body textarea {
+    min-height: 25vh;
+    resize: none;
+}
+
+/* Form Button */
+.project-form-body button {
+    width: 100%;
+    height: 8vh;
+    border: 1.5px solid #ee450e;
+    color: #ee450e;
+    font-weight: 600;
+    border-radius: 1rem;
+    background: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.project-form-body button:hover {
+    background: #ee450e;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Project Chat Container */
+.project-chat-container {
+    width: 35%;
+    height: 85vh;
+    border-radius: 1rem;
+    padding: 3vh 2vw;
+    background: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.project-chat-container h4 {
+    font-size: 1.5rem;
+    color: #1e88e5;
+    margin-bottom: 2vh;
+}
+
+/* Chat Body */
+.chat-body {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Chat Messages */
+.chat-messages {
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #42a5f5 #e3f2fd;
+}
+
+/* Message Bubbles */
+.chat-messages .my-message div,
+.chat-messages .received-message div {
+    width: fit-content;
+    max-width: 80%;
+    padding: 10px 20px;
+    border-radius: 1.5rem;
+    text-align: justify;
+}
+
+/* My Message */
+.chat-messages .my-message {
+    text-align: right;
+}
+
+.chat-messages .my-message div {
+    background: #e75221;
+    color: white;
+}
+
+/* Received Message */
+.chat-messages .received-message {
+    text-align: left;
+}
+
+.chat-messages .received-message div {
+    background: #218ee7;
+    color: white;
+}
+
+/* Chat Input */
+.chat-input {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.chat-input input {
+    width: 75%;
+    height: 8vh;
+    border-radius: 2rem 0 0 2rem;
+    padding-left: 10px;
+    border: 1.5px solid #d4d4d4;
+    font-size: 1rem;
+    color: #424242;
+}
+
+.chat-input button {
+    width: 25%;
+    height: 8vh;
+    border-radius: 0 2rem 2rem 0;
+    border: 1.5px solid #ee450e;
+    color: #ee450e;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #ee450e;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-data-page {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .project-data-container,
+    .project-chat-container {
+        width: 100%;
+    }
+
+    .chat-input input {
+        width: 65%;
+    }
+
+    .chat-input button {
+        width: 35%;
+    }
+}

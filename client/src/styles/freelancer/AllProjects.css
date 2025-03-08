@@ -1,0 +1,234 @@
+.all-projects-page {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5vh;
+    padding: 4vh 3vw;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 95%;
+    margin: auto;
+}
+
+/* Project Filters */
+.project-filters {
+    width: 25%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 3vh 2vw;
+    height: 82vh;
+    border-radius: 1rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    scrollbar-width: thin;
+    scrollbar-color: #42a5f5 #e3f2fd;
+}
+
+/* Custom Scrollbar (Webkit Browsers) */
+.project-filters::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-filters::-webkit-scrollbar-thumb {
+    background: #42a5f5;
+    border-radius: 4px;
+}
+
+.project-filters h3 {
+    font-size: 1.8rem;
+    color: #0d47a1;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.filters {
+    margin-top: 3vh;
+}
+
+.filters h5 {
+    font-size: 1.2rem;
+    color: #424242;
+    margin-bottom: 2vh;
+    font-weight: 600;
+}
+
+.filter-options {
+    font-size: 1rem;
+    color: #616161;
+    line-height: 1.6;
+}
+
+/* Project List Section */
+.projects-list {
+    width: 72%;
+    height: 82vh;
+    overflow-y: auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    padding: 4vh 3vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: #42a5f5 #e3f2fd;
+}
+
+/* Custom Scrollbar (Webkit Browsers) */
+.projects-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.projects-list::-webkit-scrollbar-thumb {
+    background: #42a5f5;
+    border-radius: 4px;
+}
+
+.projects-list hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, #42a5f5, transparent);
+    margin: 2vh 0;
+}
+
+.projects-list h3 {
+    color: #0d47a1;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Individual Project Item */
+.listed-project {
+    padding: 2.5vh 2vw;
+    border-bottom: 1px solid rgba(84, 86, 86, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.listed-project:last-child {
+    border-bottom: none;
+}
+
+.listed-project:hover {
+    background: rgba(33, 150, 243, 0.05);
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2);
+}
+
+/* Project Header */
+.listed-project-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    align-items: center;
+}
+
+.listed-project-head h3 {
+    width: 80%;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #1e88e5;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.listed-project-head p {
+    margin: 0;
+    color: #757575;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Project Content */
+.listed-project h5 {
+    font-size: 1.2rem;
+    color: #424242;
+    margin: 0.8rem 0;
+    font-weight: 500;
+}
+
+.listed-project p {
+    font-size: 1rem;
+    color: #616161;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+/* Skill Tags */
+.listed-project .skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.listed-project .skills h6 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 6px 12px;
+    border-radius: 1.5rem;
+    background: #ffebee;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.listed-project .skills h6:hover {
+    background: #ef9a9a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Bids Information */
+.listed-project .bids-data {
+    display: flex;
+    gap: 40px;
+    margin-top: 3vh;
+    align-items: center;
+}
+
+.listed-project .bids-data p {
+    font-size: 1rem;
+    color: #424242;
+    font-weight: 400;
+}
+
+.listed-project .bids-data h6 {
+    font-size: 1rem;
+    color: #424242;
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .all-projects-page {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .project-filters,
+    .projects-list {
+        width: 100%;
+    }
+
+    .projects-list h3 {
+        font-size: 1.6rem;
+    }
+
+    .listed-project-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .listed-project .bids-data {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .listed-project .skills h6 {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,114 @@
+.new-project-page {
+    margin: 5vh 3vw;
+    padding: 4vh 3vw;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 900px;
+    margin: auto;
+}
+
+.new-project-page h3 {
+    margin-bottom: 4vh;
+    color: #0d47a1;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.new-project-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.new-project-form input,
+.new-project-form textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #42a5f5;
+    border-radius: 0.8rem;
+    background-color: #ffffff;
+    font-size: 1rem;
+    color: #0d47a1;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input Focus Effect */
+.new-project-form input:focus,
+.new-project-form textarea:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+    outline: none;
+}
+
+.new-project-form textarea {
+    min-height: 30vh;
+    resize: none;
+}
+
+/* Grid Section (Budget & Duration) */
+.new-project-form span {
+    display: grid;
+    grid-template-columns: 30% 68%;
+    justify-content: space-between;
+    gap: 2%;
+    align-items: center;
+}
+
+.new-project-form span input {
+    padding: 0.8rem;
+}
+
+/* Text inside the Grid */
+.new-project-form span p {
+    font-size: 1.1rem;
+    color: #455a64;
+    font-weight: 500;
+}
+
+/* Button Styling */
+.new-project-form button {
+    width: 100%;
+    height: 8vh;
+    border: 1.5px solid #ee450e;
+    color: #ee450e;
+    font-weight: 600;
+    border-radius: 1rem;
+    background-color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.new-project-form button:hover {
+    background-color: #ee450e;
+    color: #fff8f6;
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .new-project-page {
+        padding: 3vh 2vw;
+    }
+
+    .new-project-page h3 {
+        font-size: 1.5rem;
+    }
+
+    .new-project-form span {
+        grid-template-columns: 100%;
+    }
+
+    .new-project-form span input {
+        width: 100%;
+    }
+
+    .new-project-form button {
+        height: 6vh;
+        font-size: 1rem;
+    }
+}

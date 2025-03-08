@@ -1,0 +1,204 @@
+/* User Applications Page */
+.user-applications-page {
+    padding: 4vh 3vw;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    border-radius: 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    max-width: 95%;
+    margin: auto;
+}
+
+.user-applications-page h3 {
+    color: #0d47a1;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3vh;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* User Applications Body */
+.user-applications-body {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    height: 76vh;
+    border-radius: 1rem;
+    margin-top: 3vh;
+    padding-top: 2vh;
+    overflow-y: auto;
+    background: #ffffff;
+    scrollbar-width: thin;
+    scrollbar-color: #42a5f5 #e3f2fd;
+}
+
+/* Custom Scrollbar (Webkit Browsers) */
+.user-applications-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.user-applications-body::-webkit-scrollbar-thumb {
+    background: #42a5f5;
+    border-radius: 4px;
+}
+
+.user-applications-body::-webkit-scrollbar-track {
+    background: #e3f2fd;
+}
+
+/* User Application Item */
+.user-application {
+    padding: 2.5vh 2vw;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(84, 86, 86, 0.1);
+    border-radius: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-application:last-child {
+    border-bottom: none;
+}
+
+.user-application:hover {
+    background: rgba(33, 150, 243, 0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(33, 150, 243, 0.2);
+}
+
+/* User Application Layout */
+.user-application-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.user-application hr {
+    height: 2px;
+    background: linear-gradient(90deg, #42a5f5, transparent);
+    width: 100%;
+    margin-bottom: 0;
+    border: none;
+}
+
+/* Vertical Divider */
+.vertical-line {
+    width: 2px;
+    background: linear-gradient(to bottom, #42a5f5, transparent);
+    height: 100%;
+    border-radius: 1rem;
+}
+
+/* Application Half (Left/Right) */
+.user-application-half {
+    width: 48%;
+}
+
+.user-application-half h4 {
+    font-size: 1.4rem;
+    color: #1a73e8;
+    margin-bottom: 1vh;
+    font-weight: 600;
+}
+
+.user-application-half p {
+    font-size: 1rem;
+    color: #546e7a;
+    margin-bottom: 1vh;
+    line-height: 1.6;
+}
+
+.user-application-half h5 {
+    font-size: 1rem;
+    color: rgba(9, 55, 86, 0.61);
+    margin-bottom: 0.5vh;
+    font-weight: 500;
+}
+
+.user-application-half h5 b {
+    font-size: 1rem;
+    color: rgba(5, 40, 64, 0.877);
+    font-weight: 600;
+}
+
+/* Block Elements (Spans) */
+.user-application-half span {
+    display: block;
+    margin-bottom: 1.5vh;
+}
+
+.user-application-half span h5 {
+    font-size: 1.3rem;
+    color: rgba(9, 55, 86, 0.877);
+    margin-bottom: 0.5vh;
+    font-weight: 600;
+}
+
+.user-application-half span p {
+    font-size: 1rem;
+    color: #546e7a;
+    margin-bottom: 0.5vh;
+}
+
+/* Skills Section */
+.user-application-half span .application-skills {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.user-application-half span .application-skills p {
+    color: #d32f2f;
+    border: 1px solid #d32f2f;
+    padding: 6px 12px;
+    border-radius: 1.5rem;
+    font-size: 0.8rem;
+    background-color: #ffebee;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.user-application-half span .application-skills p:hover {
+    background-color: #ef9a9a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Additional Info */
+.user-application-half h6 {
+    font-size: 1rem;
+    color: #90a4ae;
+    margin-bottom: 0.5vh;
+    font-style: italic;
+}
+
+.user-application-half h6 b {
+    font-weight: 600;
+    color: #37474f;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .user-applications-page {
+        padding: 3vh 2vw;
+    }
+
+    .user-applications-body {
+        height: auto;
+    }
+
+    .user-application-body {
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .user-application-half {
+        width: 100%;
+    }
+
+    .user-application-half h4 {
+        font-size: 1.2rem;
+    }
+
+    .user-application-half span h5 {
+        font-size: 1.1rem;
+    }
+}
